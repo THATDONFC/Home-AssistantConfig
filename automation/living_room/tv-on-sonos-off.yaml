@@ -9,7 +9,7 @@ condition:
   - condition: and
     conditions:
     - condition: state
-      entity_id: media_player.samsung_tv_remote
+      entity_id: media_player.samsung_tv
       state: 'on'
     - condition: state
       entity_id: media_player.living_room

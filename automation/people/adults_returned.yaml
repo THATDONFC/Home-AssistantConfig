@@ -2,10 +2,9 @@ alias: 'Adults returned'
 initial_state: 'on'
 trigger:
   - platform: state
-    entity_id: input_boolean.person3_home
-    to: 'on'
-  - platform: state
-    entity_id: input_boolean.person2_home
+    entity_id: 
+      - input_boolean.person3_home
+      - input_boolean.person2_home
     to: 'on'
 condition:
   - condition: state

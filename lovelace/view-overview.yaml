@@ -16,6 +16,12 @@ cards:
       type: entities
       title: Alerts
 
+  - type: picture-entity
+    entity: camera.front_camera_motion
+    camera_view: live
+    show_name: false
+    show_state: false
+
   - type: glance
     columns: 5
     show_name: false
@@ -41,6 +47,46 @@ cards:
     card:
       type: glance
       title: Occupied rooms
+      show_state: false
+
+  - type: entity-filter
+    entities:
+      - entity: media_player.living_room
+        name: Living room Sonos
+      - entity: media_player.living_room_display
+        name: Living room hub
+      - entity: media_player.cast_living_room_tv
+        name: Living room
+      - entity: media_player.samsung_tv
+        name: Living room
+      - entity: media_player.family_room
+        name: Family room
+      - entity: media_player.cast_kitchen_speaker
+        name: Kitchen
+      - entity: media_player.family_room_display
+        name: Family room hub
+      - entity: media_player.office
+        name: Office
+      - entity: media_player.office_display
+        name: Office hub
+      - entity: media_player.person2
+        name: Master bedroom
+      - entity: media_player.cast_master_bedroom_speaker
+        name: Master bedroom
+      - entity: media_player.person1
+        name: Second bedroom
+      - entity: media_player.cast_second_bedroom_speaker
+        name: Second bedroom
+      - entity: media_player.cast_master_bedroom_display
+        name: Guest bedroom
+    show_empty: false
+    state_filter:
+      - 'on'
+      - 'playing'
+      - 'idle'
+    card:
+      type: glance
+      title: Media players
       show_state: false
       
   - type: entity-filter
@@ -142,12 +188,16 @@ cards:
         tap_action: 
           action: toggle
       - entity: light.hall
-        name: Hall
+        name: "Hall"
       - entity: switch.pi3_hall_downstairs_switch
-        name: Hall socket
+        name: "Hall socket"
         tap_action: 
           action: toggle
-      - entity: light.living_room_table
+      - entity: switch.pi3_vestibule_switch
+        name: "Vestibule socket"
+        tap_action: 
+          action: toggle
+      - entity: switch.living_room_table
         name: Table
       - entity: switch.pi3_tv_light_switch
         tap_action: 

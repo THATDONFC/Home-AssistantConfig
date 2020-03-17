@@ -1,4 +1,4 @@
-alias: 'person2 away Garage open'
+alias: 'Rob away Garage open'
 initial_state: 'on'
 trigger:
   - platform: state

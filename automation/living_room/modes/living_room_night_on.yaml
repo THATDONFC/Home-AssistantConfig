@@ -14,7 +14,7 @@ trigger:
       minutes: 5
   - platform: numeric_state
     entity_id: sensor.pi3_living_room_multi_luminance
-    below: 8
+    below: 10
     for:
       minutes: 1
   - platform: numeric_state
@@ -41,7 +41,7 @@ condition:
           state: 'off'
         - condition: numeric_state
           entity_id: sensor.pi3_living_room_multi_luminance
-          below: 15
+          below: 12
       - condition: and
         conditions:
         - condition: state

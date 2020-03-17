@@ -12,13 +12,13 @@ action:
   - service: switch.turn_off
     entity_id:
       - switch.pi3_family_room_socket_switch
-      - switch.pi3_livingroom_socket_switch
+      - switch.pi3_cabinet_light_switch
       - switch.pi3_vestibule_switch
       - switch.pi3_hall_downstairs_switch
   - delay: '00:01:00'
   - service: switch.turn_off
     entity_id:
       - switch.pi3_family_room_socket_switch
-      - switch.pi3_livingroom_socket_switch
+      - switch.pi3_cabinet_light_switch
       - switch.pi3_vestibule_switch
       - switch.pi3_hall_downstairs_switch

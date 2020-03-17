@@ -1,4 +1,4 @@
-alias: 'person2 Travelling'
+alias: 'Rob Travelling'
 initial_state: 'on'
 trigger:
   - platform: numeric_state

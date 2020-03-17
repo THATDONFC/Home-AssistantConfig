@@ -6,5 +6,5 @@ trigger:
   event: start
 action:
   - service: script.notify_person2
-    data:
-      message: "Home Assistant has started on Vision"
+    data_template:
+      message: "Home Assistant has started on Vision ({{ utcnow() }})"

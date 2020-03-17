@@ -2,6 +2,8 @@ title: Automations
 id: automations
 path: automations
 icon: mdi:home-variant
+visible:
+  - user: 2e93f54c62e549c8aeperson2748de6bed9d
 cards:
 - type: entities
   title: Room status
@@ -18,6 +20,7 @@ cards:
   - automation.living_room_dim_off
   - automation.living_room_night_on
   - automation.living_room_off
+  - automation.living_room_off_empty
 - type: entities
   title: Automations for the living room lights
   show_header_toggle: false
@@ -54,12 +57,6 @@ cards:
   - automation.dimmer_up_while_on
   - automation.dimmer_down_while_on
 - type: entities
-  title: Family room automations
-  show_header_toggle: false
-  entities:
-  - automation.family_room_occupied
-  - automation.family_room_not_occupied
-- type: entities
   title: House
   show_header_toggle: false
   entities:
@@ -74,14 +71,49 @@ cards:
   - automation.hall_lights_to_away
   - automation.hall_lights_to_bedtime
   - automation.hall_lights_to_dim
+  - automation.hall_lights_to_night_on
   - automation.hall_lights_to_off
   - type: divider
   - automation.hall_mode_away
   - automation.hall_mode_bedtime
+  - automation.hall_mode_bedtime_reset
   - automation.hall_mode_dim
+  - automation.hall_mode_night_on
   - automation.hall_mode_off
   - type: divider
   - automation.hall_lights_unavailable_off
+- type: entities
+  title: Vestibule
+  show_header_toggle: false
+  entities:
+  - automation.vestibule_lights_to_away
+  - automation.vestibule_lights_to_bedtime
+  - automation.vestibule_lights_to_off
+  - automation.vestibule_lights_to_on
+  - automation.vestibule_lights_to_night_on
+  - type: divider
+  - automation.vestibule_mode_away
+  - automation.vestibule_mode_bedtime
+  - automation.vestibule_mode_off
+  - automation.vestibule_mode_on
+  - automation.vestibule_mode_night_on
+- type: entities
+  title: Family room
+  show_header_toggle: false
+  entities:
+  - automation.family_room_occupied
+  - automation.family_room_not_occupied
+  - type: divider
+  - automation.family_room_arrival
+  - automation.family_room_mode_away
+  - automation.family_room_mode_bedtime
+  - automation.family_room_mode_off
+  - automation.family_room_mode_on
+  - type: divider
+  - automation.family_room_lights_to_away
+  - automation.family_room_lights_to_bedtime
+  - automation.family_room_lights_to_off
+  - automation.family_room_lights_to_on
 - type: entities
   title: Front of the house
   show_header_toggle: false
@@ -107,6 +139,7 @@ cards:
   - automation.utility_door_open_after_sunset_turn_off
   - automation.nighttime_garden_off
   - automation.garden_lights_left_on
+  - automation.utility_door_left_open
   - binary_sensor.garden_lights_left_on
 - type: entities
   title: Automations for the office

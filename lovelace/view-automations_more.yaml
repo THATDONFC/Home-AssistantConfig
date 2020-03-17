@@ -2,6 +2,8 @@ title: More Automations
 id: automations_more
 path: automations_more
 icon: mdi:settings
+visible:
+  - user: 2e93f54c62e549c8aeperson2748de6bed9d
 cards:
 - type: entities
   title: Automations at startup
@@ -10,6 +12,19 @@ cards:
   - automation.startup_person3_up
   - automation.startup_person1_up
   - automation.startup_person2_up
+- type: entities
+  title: Battery level automations
+  show_header_toggle: false
+  entities:
+  - automation.battery_garage_door_closed_car
+  - automation.battery_garage_door_closed_bike
+  - automation.battery_livingroom_multi
+  - automation.battery_utility_door
+  - automation.battery_utility_light_switch
+  - automation.battery_front_door
+  - automation.battery_patio_door_left
+  - automation.battery_remote
+  - automation.battery_green_remote
 - type: entities
   title: Misc automations
   show_header_toggle: false
@@ -59,6 +74,7 @@ cards:
   - automation.plex_hook
   - automation.device_unavailable
   - automation.remote_ping
+  - automation.notify_about_hacs_updates
 - type: entities
   title: Zigbee mesh automations
   show_header_toggle: false
@@ -82,3 +98,12 @@ cards:
   - automation.alarm_triggered_away
   - automation.alarm_triggered_home
   - automation.alarm_disarm_hall
+- type: entities
+  show_header_toggle: false
+  title: Other bits
+  entities:
+  - automation.bt_front_offline
+  - automation.bt_front_offline_too_long
+  - automation.bt_rear_offline
+  - automation.motion_hook
+  - automation.nearly_home

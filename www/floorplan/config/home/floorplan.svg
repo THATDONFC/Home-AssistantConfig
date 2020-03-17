@@ -909,12 +909,12 @@
      id="namedview3682"
      showgrid="false"
      inkscape:zoom="19.454502"
-     inkscape:cx="708.1167"
-     inkscape:cy="468.15991"
+     inkscape:cx="126.65436"
+     inkscape:cy="466.23647"
      inkscape:window-x="-13"
      inkscape:window-y="-13"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer6"
+     inkscape:current-layer="layer2"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
@@ -5049,55 +5049,50 @@
            style="fill:#b381c9;fill-opacity:1" />
       </svg>
     </g>
+    <path
+       style="display:inline;fill:#515151;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 48.005874,77.809732 6.471925,15.26223 30.444333,-12.90987 -6.471925,-15.26223 z"
+       id="media_player.cast_living_room_tv"
+       inkscape:connector-curvature="0"
+       inkscape:label="#path2564">
+      <desc
+         id="desc6416">Chromecast</desc>
+    </path>
     <g
-       id="g8922"
-       transform="translate(-2.3644912,-4.0093547)">
-      <path
-         inkscape:label="#path2564"
-         inkscape:connector-curvature="0"
-         id="media_player.cast_living_room_tv"
-         d="m 50.370365,149.1524 6.471925,15.26223 30.444333,-12.90987 -6.471925,-15.26223 z"
-         style="display:inline;fill:#515151;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         transform="translate(0,-67.333313)">
-        <desc
-           id="desc6416">Chromecast</desc>
-      </path>
-      <g
-         inkscape:label="#asdf"
-         transform="matrix(1.9027708,-0.80686674,0.53932707,1.2718529,40.062362,78.687316)"
-         id="device_tracker.livingroom_chromecast"
-         style="display:inline;overflow:visible;fill:#81c995;fill-opacity:1">
-        <svg
-           style="fill:#81c995;fill-opacity:1"
-           width="24"
-           height="24"
-           version="1.1"
-           id="svg4842-1">
-          <path
-             style="fill:#81c995;fill-opacity:1"
-             inkscape:connector-curvature="0"
-             d="M 20,17 H 4 V 5 H 20 M 20,3 H 4 C 2.89,3 2,3.89 2,5 v 12 a 2,2 0 0 0 2,2 h 4 v 2 h 8 v -2 h 4 a 2,2 0 0 0 2,-2 V 5 C 22,3.89 21.1,3 20,3 Z"
-             id="path4840-0" />
-        </svg>
-      </g>
-      <g
-         inkscape:label="#asdf"
-         transform="matrix(1.9027708,-0.80686674,0.53932707,1.2718529,40.062646,78.687285)"
-         id="media_player.samsung_tv_remote"
-         style="overflow:visible;fill:#b381c9;fill-opacity:1">
-        <svg
-           style="fill:#b381c9;fill-opacity:1"
-           width="24"
-           height="24"
-           version="1.1"
-           id="svg4842">
-          <path
-             style="fill:#b381c9;fill-opacity:1"
-             inkscape:connector-curvature="0"
-             d="M 20,17 H 4 V 5 H 20 M 20,3 H 4 C 2.89,3 2,3.89 2,5 v 12 a 2,2 0 0 0 2,2 h 4 v 2 h 8 v -2 h 4 a 2,2 0 0 0 2,-2 V 5 C 22,3.89 21.1,3 20,3 Z"
-             id="path4840" />
-        </svg>
-      </g>
+       style="display:inline;overflow:visible;fill:#81c995;fill-opacity:1"
+       id="device_tracker.livingroom_chromecast"
+       transform="matrix(1.9027708,-0.80686674,0.53932707,1.2718529,37.697871,74.677961)"
+       inkscape:label="#asdf">
+      <svg
+         id="svg4842-1"
+         version="1.1"
+         height="24"
+         width="24"
+         style="fill:#81c995;fill-opacity:1">
+        <path
+           id="path4840-0"
+           d="M 20,17 H 4 V 5 H 20 M 20,3 H 4 C 2.89,3 2,3.89 2,5 v 12 a 2,2 0 0 0 2,2 h 4 v 2 h 8 v -2 h 4 a 2,2 0 0 0 2,-2 V 5 C 22,3.89 21.1,3 20,3 Z"
+           inkscape:connector-curvature="0"
+           style="fill:#81c995;fill-opacity:1" />
+      </svg>
+    </g>
+    <g
+       style="overflow:visible;fill:#b381c9;fill-opacity:1"
+       id="media_player.samsung_tv"
+       transform="matrix(1.9027708,-0.80686674,0.53932707,1.2718529,37.698155,74.67793)"
+       inkscape:label="#asdf">
+      <svg
+         id="svg4842"
+         version="1.1"
+         height="24"
+         width="24"
+         style="fill:#b381c9;fill-opacity:1">
+        <path
+           id="path4840"
+           d="M 20,17 H 4 V 5 H 20 M 20,3 H 4 C 2.89,3 2,3.89 2,5 v 12 a 2,2 0 0 0 2,2 h 4 v 2 h 8 v -2 h 4 a 2,2 0 0 0 2,-2 V 5 C 22,3.89 21.1,3 20,3 Z"
+           inkscape:connector-curvature="0"
+           style="fill:#b381c9;fill-opacity:1" />
+      </svg>
     </g>
     <rect
        style="display:inline;fill:#81c9a7;fill-opacity:1;stroke-width:0.91798711"

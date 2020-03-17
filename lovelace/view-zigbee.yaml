@@ -1,9 +1,0 @@
-title: Zigbee
-id: zigbee
-path: zigbee
-icon: mdi:zigbee
-panel: true
-cards:
-  - type: picture-entity
-    entity: sensor.zigbee2mqtt_bridge_state
-    camera_image: camera.local_file

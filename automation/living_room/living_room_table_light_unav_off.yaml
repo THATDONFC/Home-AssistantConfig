@@ -18,5 +18,3 @@ action:
   - service: light.turn_on
     data_template:
       entity_id: light.living_room_table
-      brightness_pct: 75
-      transition: 30

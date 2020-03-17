@@ -1,5 +1,5 @@
 initial_state: 'on'
-alias: 'person2 tablet plugged'
+alias: 'Rob tablet plugged'
 trigger:
   - platform: event
     event_type: tasker_webhook

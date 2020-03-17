@@ -1,7 +1,9 @@
 title: Notification automations
 id: notifications
 path: notifications
-icon: mdi:bell-ring
+icon: mdi:telegram
+visible:
+  - user: 2e93f54c62e549c8aeperson2748de6bed9d
 cards:
 - type: entities
   show_header_toggle: false
@@ -16,4 +18,5 @@ cards:
   - automation.telegram_command_status
   - automation.telegram_command_trains
   - automation.telegram_command_where
+  - automation.telegram_command_help
   - automation.telegram_text

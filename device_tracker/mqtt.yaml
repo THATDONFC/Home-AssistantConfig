@@ -1,4 +1,5 @@
 platform: mqtt
+source_type: 'bluetooth'
 devices:
   person2_bt_mobile: 'monitor/first floor rear/person2_mobile/device_tracker'
   person2_bt_front_mobile: 'monitor/first floor front/person2_mobile/device_tracker'

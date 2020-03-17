@@ -2,18 +2,14 @@ alias: 'Adults away home off'
 initial_state: 'on'
 trigger:
   - platform: state
-    entity_id: input_boolean.person3_home
+    entity_id: 
+      - input_boolean.person3_home
+      - input_boolean.person2_home
     to: 'off'
   - platform: state
-    entity_id: input_boolean.person2_home
-    to: 'off'
-  - platform: state
-    entity_id: input_boolean.person3_home
-    to: 'off'
-    for:
-      minutes: 5
-  - platform: state
-    entity_id: input_boolean.person2_home
+    entity_id: 
+      - input_boolean.person3_home
+      - input_boolean.person2_home
     to: 'off'
     for:
       minutes: 5

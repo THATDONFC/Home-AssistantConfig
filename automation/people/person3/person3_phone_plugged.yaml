@@ -10,8 +10,9 @@ condition:
     value_template: >-
       {{ 'Plugged' in trigger.event.data.what }}
 action:
-  - service: input_boolean.turn_off
-    entity_id: input_boolean.person3_phone_charging
-  - delay: '00:00:01'
   - service: input_boolean.turn_on
     entity_id: input_boolean.person3_phone_charging
+  - service: notify.logfile
+    data_template:
+      message: >
+        person3 phone plugged in at {{ now() }}

@@ -1,5 +1,5 @@
-# Home Assistant (0.100.2) configuration
-This is my primary [Home Assistant](https://home-assistant.io/) configuration, This instance is running 0.100.2 on a VM, using an old laptop (Intel Core i5-3230M), with a manual Python virtual environment install [following this guide](https://home-assistant.io/docs/installation/raspberry-pi/).
+# Home Assistant (0.106.6) configuration
+This is my primary [Home Assistant](https://home-assistant.io/) Core configuration, This instance is running 0.106.6 on a VM, using an old laptop (Intel Core i5-3230M), with a manual Python virtual environment install (aka Home Assistant Core) [following this guide](https://home-assistant.io/docs/installation/raspberry-pi/).
 
 Each directory has a short readme explaining what's in there, and the purpose of each file or group of files.
 
@@ -74,7 +74,7 @@ This is one of a number of Pi3s I've got, and they're all in a [Multi-Pi stackab
 * [DarkSky](https://darksky.net/dev/) for weather data, alongside the [Met Office](https://www.metoffice.gov.uk/datapoint), along with the [associated](https://home-assistant.io/integrations/darksky/) sensor [integration](https://home-assistant.io/integrations/metoffice/)
 * [Plex](https://www.plex.tv/sign-in/) for watching media, on TV, tablets and mobiles. I don't currently use [the component](https://home-assistant.io/components/media_player.plex/)
 * [Xbox Live sensor](https://home-assistant.io/integrations/xbox_live/) which uses the [XBoxAPI](https://xboxapi.com/) to track when one of us is on the XBox
-* [Google Travel Time integration](https://home-assistant.io/integrations/google_travel_time/) which uses the Google [Distance Matrix](https://developers.google.com/maps/documentation/distance-matrix/) to provide estimated time to home
+* [Here Travel Time](https://www.home-assistant.io/integrations/here_travel_time/) integration, replacing my previous use of the [Google Travel Time integration](https://home-assistant.io/integrations/google_travel_time/) (which uses the Google [Distance Matrix](https://developers.google.com/maps/documentation/distance-matrix/)) to provide estimated time to home
 * [Getmail](http://pyropus.ca/software/getmail/) with [a script](local/bin/parse-email) that acts as the message delivery agent, to parse the recycling collection emails
   * I gave up on the the [IMAP email content](https://home-assistant.io/integrations/imap_email_content/) sensor since it doesn't keep state through restarts (which isn't unique to it, Home Assistant doesn't have a persistence mechanism other than for the `input_*` entities)
 * A HiWatch IPC-T140 dome camera, using the generic camera integration.

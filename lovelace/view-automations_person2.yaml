@@ -2,6 +2,8 @@ title: Automations person2
 id: automations_person2
 path: automations_person2
 icon: mdi:account-star
+visible:
+  - user: 2e93f54c62e549c8aeperson2748de6bed9d
 cards:
 - type: entities
   title: People driven automations - person2
@@ -40,6 +42,9 @@ cards:
   - automation.person2_changing_zones
   - automation.person2_driving
   - automation.person2_not_driving
+  - automation.person2_overseas
+  - automation.person2_not_overseas
+  - automation.person2_gpslogger_tracker
 - type: entities
   title: Automations for alarms - person2
   show_header_toggle: false

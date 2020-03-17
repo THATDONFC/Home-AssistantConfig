@@ -2,13 +2,10 @@ initial_state: 'on'
 alias: 'Bedtime'
 trigger:
   - platform: state
-    entity_id: input_boolean.person3_in_bed
-    to: 'on'
-  - platform: state
-    entity_id: input_boolean.person2_in_bed
-    to: 'on'
-  - platform: state
-    entity_id: input_boolean.person1_in_bed
+    entity_id:
+      - input_boolean.person3_in_bed
+      - input_boolean.person2_in_bed
+      - input_boolean.person1_in_bed
     to: 'on'
 condition:
   - condition: and

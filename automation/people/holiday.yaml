@@ -2,13 +2,10 @@ alias: 'Holiday'
 initial_state: 'on'
 trigger:
   - platform: state
-    entity_id: input_boolean.person2_travelling
-    to: 'on'
-  - platform: state
-    entity_id: input_boolean.person3_travelling
-    to: 'on'
-  - platform: state
-    entity_id: input_boolean.person1_travelling
+    entity_id: 
+      - input_boolean.person2_travelling
+      - input_boolean.person3_travelling
+      - input_boolean.person1_travelling
     to: 'on'
 condition:
   condition: and

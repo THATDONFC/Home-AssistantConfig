@@ -1,9 +1,9 @@
 alias: 'Extractor on'
 initial_state: 'on'
 trigger:
-  - platform: numeric_state
-    entity_id: sensor.master_ensuite_humidity
-    above: 80
+  - platform: template
+    value_template: >-
+      {{ states('sensor.master_ensuite_humidity')|int > (((states('sensor.bathroom_humidity')|int + states('sensor.pi3_office_multi_relative_humidity')|int + states('sensor.second_bedroom_ensuite_humidity')|int)/3)+20) }}
     for: '00:05:00'
 condition:
   - condition: state

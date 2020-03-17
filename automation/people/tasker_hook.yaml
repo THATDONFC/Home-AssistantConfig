@@ -10,6 +10,9 @@ action:
       who: "{{ trigger.json.who }}"
       what: "{{ trigger.json.what }}"
       when: "{{ trigger.json.when }}"
+      device: "{{ trigger.json.device }}"
+      roaming: "{{ trigger.json.roaming }}"
+      phonenet: "{{ trigger.json.phonenet }}"
   - service: notify.logfile
     data_template:
       message: >

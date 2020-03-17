@@ -1,4 +1,4 @@
-alias: 'person2 at LHR'
+alias: 'Rob at LHR'
 initial_state: 'on'
 trigger:
   - platform: state

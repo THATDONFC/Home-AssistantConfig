@@ -2,6 +2,8 @@ title: Media players
 id: media
 path: media
 icon: mdi:movie
+visible:
+  - user: 2e93f54c62e549c8aeperson2748de6bed9d
 cards:
   - type: entities
     title: Living room
@@ -29,7 +31,7 @@ cards:
         group: true
         icon: mdi:google-chrome
         power_color: true
-      - entity: media_player.samsung_tv_remote
+      - entity: media_player.samsung_tv
         name: Samsung TV
         type: custom:mini-media-player
         group: true

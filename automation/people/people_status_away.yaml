@@ -2,22 +2,11 @@ alias: Mark person as away
 initial_state: 'on'
 trigger:
   - platform: state
-    entity_id: input_select.person2_status_dropdown
-    to: 'Just Left'
-    for:
-      minutes: 5
-  - platform: state
-    entity_id: input_select.person3_status_dropdown
-    to: 'Just Left'
-    for:
-      minutes: 5
-  - platform: state
-    entity_id: input_select.person1_status_dropdown
-    to: 'Just Left'
-    for:
-      minutes: 5
-  - platform: state
-    entity_id: input_select.person4_status_dropdown
+    entity_id:
+      - input_select.person2_status_dropdown
+      - input_select.person3_status_dropdown
+      - input_select.person1_status_dropdown
+      - input_select.person4_status_dropdown
     to: 'Just Left'
     for:
       minutes: 5

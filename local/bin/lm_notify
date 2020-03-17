@@ -58,6 +58,9 @@ case "${MESSAGE}" in
 		CYCLES=2
 		unset SOUND
 		;;
+	Lightning* )
+		ICON=i95
+		;;
 	* ) 	# Might be weather? i2151 for snow, i2441 for hail, i11428 for lightning/thunder, i72 for rain, i2440 for wind, i2283 for cloudy
 			# i2286 for party cloudy, 
 			# i962 for moon, i2155 for sunny

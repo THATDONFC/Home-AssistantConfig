@@ -1,4 +1,4 @@
-alias: 'person2 not working from home'
+alias: 'Rob not working from home'
 initial_state: 'on'
 trigger:
   - platform: state

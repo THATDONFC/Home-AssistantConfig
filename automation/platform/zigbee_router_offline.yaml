@@ -13,13 +13,7 @@ trigger:
       minutes: 10
 condition:
   - condition: state
-    entity_id: sensor.zigbee2mqtt_bridge_state
-    state: 'online'
-  - condition: state
     entity_id: light.hall
-    state: 'unavailable'
-  - condition: state
-    entity_id: light.living_room_table
     state: 'unavailable'
   - condition: or
     conditions:

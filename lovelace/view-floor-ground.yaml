@@ -31,7 +31,7 @@ cards:
       name: "Temperature"
     - entity: sensor.pi3_living_room_multi_luminance
       name: "Light level"
-    - entity: media_player.samsung_tv_remote
+    - entity: media_player.samsung_tv
       name: TV
     - entity: media_player.cast_living_room_tv
       name: Chromecast
@@ -111,17 +111,38 @@ cards:
     - entity: switch.pi3_garden_lights_switch
       tap_action: 
         action: toggle
-- type: history-graph
+- type: custom:mini-graph-card
   title: Light level
+  points_per_hour: 6
   hours_to_show: 12
+  line_width: 2
+  hour24: true
+  animate: true
+  show:
+    extrema: true
+    average: true
+    fill: true
+    labels: true
   entities:
     - entity: sensor.pi3_living_room_multi_luminance
       name: Living room
-- type: history-graph
+      color: darkgoldenrod
+- type: custom:mini-graph-card
   title: Temperature
+  points_per_hour: 6
   hours_to_show: 12
+  line_width: 2
+  hour24: true
+  animate: true
+  show:
+    extrema: true
+    average: true
+    fill: false
+    labels: true
   entities:
     - entity: sensor.pi3_living_room_multi_temperature
       name: Living room
+      color: darkgoldenrod
     - entity: sensor.dark_sky_temperature
       name: Outside
+      color: 'silver'

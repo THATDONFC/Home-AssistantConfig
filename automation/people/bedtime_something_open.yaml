@@ -2,10 +2,9 @@ alias: 'Bedtime something open'
 initial_state: 'on'
 trigger:
   - platform: state
-    entity_id: input_boolean.person3_is_awake
-    to: 'off'
-  - platform: state
-    entity_id: input_boolean.person2_is_awake
+    entity_id: 
+      - input_boolean.person3_is_awake
+      - input_boolean.person2_is_awake
     to: 'off'
 condition:
   condition: and

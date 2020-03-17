@@ -99,9 +99,9 @@ cards:
               class: 'tracker-work'
             - state: 'At work'
               class: 'tracker-other'
-            - state: 'home station'
+            - state: 'home Station'
               class: 'tracker-travel'
-            - state: 'station train station'
+            - state: 'station Train Station'
               class: 'tracker-travel'
             - state: 'work Airport'
               class: 'tracker-travel'
@@ -189,7 +189,7 @@ cards:
         - entities:
             - device_tracker.family_tv
             - device_tracker.livingroom_chromecast
-            - media_player.samsung_tv_remote
+            - media_player.samsung_tv
             - sensor.person1
           states:
             - state: 'on'

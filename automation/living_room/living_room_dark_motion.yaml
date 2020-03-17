@@ -37,3 +37,7 @@ action:
     data:
       entity_id: input_select.living_room
       option: 'Dim'
+  - service: timer.start
+    data:
+      entity_id: timer.living_room_motion
+      duration: '00:02:00'

@@ -5,7 +5,13 @@ sequence:
       entity_id: input_text.person_person3
       value: >-
         {% if is_state("input_boolean.person3_home", "on") %}
-          {{ states("input_select.person3_status_dropdown") }}
+          {% if is_state('input_boolean.person3_is_awake','off') %}
+            Sleeping
+          {% elif is_state('input_boolean.person3_in_bed','on') %}
+            In bed
+          {% else %}
+            {{ states("input_select.person3_status_dropdown") }} 
+          {% endif %}
         {% elif is_state("device_tracker.person3_mobile", "home") and is_state("input_boolean.person3_home", "off") %}
           Near home ({{ states("input_select.person3_status_dropdown") }})
         {% elif not is_state("device_tracker.person3_mobile", "not_home") %}

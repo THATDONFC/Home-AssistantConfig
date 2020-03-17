@@ -1,5 +1,5 @@
 initial_state: 'on'
-alias: 'person2 changing zones'
+alias: 'Rob changing zones'
 trigger:
   # Been away for a few minutes
   - platform: state

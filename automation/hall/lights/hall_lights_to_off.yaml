@@ -29,9 +29,7 @@ action:
     data:
       entity_id: light.hall
   - service: switch.turn_off
-    entity_id: 
-      - switch.pi3_hall_downstairs_switch
-      - switch.pi3_vestibule_switch
+    entity_id: switch.pi3_hall_downstairs_switch
   - delay: '00:01:00'
   - service: light.turn_off
     data:

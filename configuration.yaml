@@ -30,29 +30,22 @@ lovelace:
 
 http: !include http.yaml
 
-discovery:
-  ignore:
-    - plex_mediaserver
+discovery: !include discovery.yaml
 
 history:
 logbook:
 recorder: !include recorder.yaml
 influxdb: !include influxdb.yaml
 
-tts:
-  - platform: google_translate
-    service_name: google_say
-    base_url: !secret local_base
-  - platform: google_cloud
-    key_file: secrets/google_cloud.json
-    voice: en-GB-Standard-C
-    base_url: !secret local_base
+tts: !include tts.yaml
 
 group: !include groups.yaml
 
 script: !include_dir_named scripts/
 automation: !include automations.yaml
 automation mine: !include_dir_list automation/
+scene: !include scenes.yaml
+scene mine: !include_dir_list scenes/
 
  
 device_tracker: !include_dir_list device_tracker/
@@ -60,7 +53,6 @@ proximity: !include_dir_merge_named proximity/
 sensor: !include_dir_merge_list sensors/
 binary_sensor: !include_dir_merge_list binary_sensors/
 google: !include google.yaml
-
 sun:
 weather: !include_dir_merge_list weather/
 zone: !include zones.yaml
@@ -70,70 +62,27 @@ input_boolean: !include_dir_named input_boolean/
 input_select: !include_dir_named input_select/
 input_datetime: !include_dir_named input_datetime/
 input_text: !include_dir_named input_text/
+timer: !include_dir_named timers/
 
 light: !include_dir_merge_list light/
 switch: !include_dir_merge_list switch/
-
-media_player: !include_dir_merge_list media_player/
-
+samsungtv: !include samsung_tv.yaml
 rest_command: !include_dir_named rest_command/
 
 alarm_control_panel: !include_dir_list alarm/
 
 alert: !include_dir_named alerts/
 notify: !include_dir_merge_list notify/
+telegram_bot: !include telegram.yaml
 
 camera: !include_dir_list camera/
-ffmpeg:
-  ffmpeg_bin: /usr/local/bin/ffmpeg
+ffmpeg: !include ffmpeg.yaml
 stream:
 
 mqtt: !include mqtt.yaml
 
-hacs:
-  token: !secret hacs
-  theme: true
+hacs: !include hacs.yaml
 
-circadian_lighting:
-  interval: 300
-  transition: 60
-  min_colortemp: 2000
-  max_colortemp: 6500
+circadian_lighting: !include circadian.yaml
 
-telegram_bot: !include telegram.yaml
-
-remote_homeassistant:
-  instances:
-  - host: 192.168.0.10
-    port: 8123
-    secure: false
-    verify_ssl: false
-    access_token: !secret pi3
-    entity_prefix: "pi3_"
-    subscribe_events:
-    - zwave.network_ready
-    - zwave.node_event
-    - zwave.scene_activated
-    - state_changed
-    - service_registered
-    exclude:
-      domains:
-      - alarm
-      - alert
-      - automation
-      - calendar
-      - camera
-      - device_tracker
-      - group
-      - input_boolean
-      - input_datetime
-      - input_number
-      - input_select
-      - input_text
-      - light
-      - media_player
-      - persistent_notification
-      - person
-      - proximity
-      - script
-      - zone
+remote_homeassistant: !include remote_ha.yaml

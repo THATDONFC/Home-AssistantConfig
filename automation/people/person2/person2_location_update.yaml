@@ -1,5 +1,5 @@
 initial_state: 'on'
-alias: 'person2 location update'
+alias: 'Rob location update'
 trigger:
   # I've moved
   - platform: state

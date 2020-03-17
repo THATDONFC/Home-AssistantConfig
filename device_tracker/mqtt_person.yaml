@@ -1,4 +1,5 @@
 platform: mqtt
+source_type: 'router'
 devices:
   person2: 'location/person2'
   person3: 'location/person3'

@@ -5,6 +5,10 @@ trigger:
   # Event can also be 'shutdown'
   event: shutdown
 action:
+  - service: input_datetime.set_datetime
+    entity_id: input_datetime.ha_shutdown
+    data_template:
+      datetime: "{{ now().strftime('%Y-%m-%d %H:%M:%S') }}"
   - service: script.notify_person2
-    data:
-      message: "Home Assistant has shut down on Vision"
+    data_template:
+      message: "Home Assistant has shut down on Vision ({{ utcnow() }})"

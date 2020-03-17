@@ -6,3 +6,6 @@ trigger:
     to: 'on'
 action:
   - service: script.scan_bt_arrive
+  - service: automation.turn_off
+    data:
+      entity_id: automation.garage_open_nobody_home

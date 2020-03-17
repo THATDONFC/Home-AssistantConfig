@@ -30,14 +30,12 @@ action:
       entity_id: light.hall
       transition: 10
       brightness_pct: 1
+  - service: switch.turn_off
+    entity_id: switch.pi3_hall_downstairs_switch
   - delay: '00:01:00'
   - service: light.turn_off
     data:
       entity_id: light.hall
-  - service: switch.turn_off
-    entity_id: 
-      - switch.pi3_hall_downstairs_switch
-      - switch.pi3_vestibule_switch
   - delay: '00:01:00'
   - service: light.turn_off
     data:

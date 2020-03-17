@@ -16,13 +16,10 @@ trigger:
     below: 500
   # People just got home
   - platform: state
-    entity_id: input_select.person3_status_dropdown
-    to: 'Just Arrived'
-  - platform: state
-    entity_id: input_select.person1_status_dropdown
-    to: 'Just Arrived'
-  - platform: state
-    entity_id: input_select.person2_status_dropdown
+    entity_id:
+      - input_select.person3_status_dropdown
+      - input_select.person1_status_dropdown
+      - input_select.person2_status_dropdown
     to: 'Just Arrived'
   # Should also include some travel time magic here
   # Basically, travel time < 15 for 10 minutes, travelling towards home

@@ -36,12 +36,14 @@ trigger:
 condition:
   - condition: and
     conditions:
-    - condition: template
-      value_template: "{{ not is_state('input_select.hall','Dim') }}"
-    # We're awake
-    - condition: state
-      entity_id: input_boolean.bedtime
-      state: 'off'
+    - condition: or
+      conditions:
+      - condition: template
+        value_template: "{{ states('input_select.hall') in ('Away','Off','Auto') }}"
+      # We're awake
+      - condition: state
+        entity_id: input_boolean.bedtime
+        state: 'off'
     # Dark in the living room
     - condition: numeric_state
       entity_id: sensor.pi3_living_room_multi_luminance
@@ -70,6 +72,9 @@ condition:
         entity_id: input_boolean.guest_mode
         state: 'on'
 action:
+  - service: notify.logfile
+    data_template:
+      message: "Turned the hall light to Night On because of {{ trigger.to_state.entity_id }}, was {{ states('input_select.hall') }}"
   - service: input_select.select_option
     data:
       entity_id: input_select.hall

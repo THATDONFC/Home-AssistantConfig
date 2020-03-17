@@ -2,6 +2,8 @@ title: Information
 id: information
 path: info
 icon: mdi:information-outline
+visible:
+  - user: 2e93f54c62e549c8aeperson2748de6bed9d
 cards:
 - type: entities
   title: Downstairs rooms

@@ -4,6 +4,7 @@ trigger:
   - platform: state
     entity_id: input_boolean.living_room_occupied
     to: 'on'
+    for: '00:00:02'
   - platform: numeric_state
     entity_id: sensor.pi3_living_room_multi_luminance
     below: 18

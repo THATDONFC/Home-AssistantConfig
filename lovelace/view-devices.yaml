@@ -2,6 +2,8 @@ title: Devices
 id: devices
 path: devices
 icon: mdi:engine
+visible:
+  - user: 2e93f54c62e549c8aeperson2748de6bed9d
 cards:
 - type: glance
   title: Devices
@@ -13,19 +15,21 @@ cards:
     name: Living room chromecast
   - entity: media_player.cast_living_room_tv
     name: Living room chromecast
-  - entity: media_player.samsung_tv_remote
+  - entity: media_player.samsung_tv
     name: Living room TV
   - entity: switch.pi3_table_light_switch
     name: Table light switch
 - type: glance
-  title: Monitor
+  title: Things
   show_header_toggle: false
-  columns: 2
+  show_state: false
+  columns: 3
   entities:
   - entity: binary_sensor.first_floor_front
-    name: Front
+    name: BT Front
   - entity: binary_sensor.first_floor_rear
-    name: Rear
+    name: BT Rear
+  - binary_sensor.remote_ui
 - type: entities
   title: Zigbee
   show_header_toggle: false
@@ -47,100 +51,66 @@ cards:
   show_header_toggle: false
   columns: 5
   entities:
-    - entity: sensor.bathroom_environment_battery
-      name: Bathroom environment
-    - entity: sensor.master_window_left_battery
-      name: Master bed left
-    - entity: sensor.master_window_right_battery
-      name: Master bed right
-    - entity: sensor.guestbedroom_window_left_battery
-      name: Guest left
-    - entity: sensor.second_bedroom_ensuite_environment_battery
-      name: Second bed ensuite environment
-    - entity: sensor.vestibule_window_front_battery
-      name: Vestibule window front
-    - entity: sensor.vestibule_window_side_battery
-      name: Vestibule window side
-    - entity: sensor.guestbedroom_window_right_battery
-      name: Guest right
-    - entity: sensor.hall_downstairs_motion_battery
-      name: Downstairs hall motion
-    - entity: sensor.vestibule_motion_battery
-      name: Vestibule motion
-    - entity: sensor.master_ensuite_environment_battery
-      name: Master ensuite environment
-    - entity: sensor.master_window_ensuite_battery
-      name: Master ensuite window
-    - entity: sensor.office_button_battery
-      name: Office button
-    - entity:  sensor.master_window_ensuite_battery
-      name: Master ensuite window
-    - entity:  sensor.office_window_battery
-      name: Office window
-    - entity:  sensor.second_bedroom_window_ensuite_battery
-      name: Second bedroom ensuite window
-    - entity:  sensor.second_bedroom_window_right_battery
-      name: Second bedroom right window
-    - entity:  sensor.second_bedroom_window_left_battery
-      name: Second bedroom left window
-    - entity:  sensor.spare_bedroom_window_left_battery
-      name: Spare bedroom left window
-    - entity:  sensor.spare_bedroom_window_right_battery
-      name: Spare bedroom right window
-    - entity:  sensor.bathroom_window_battery
-      name: Bathroom window
-    - entity: sensor.dimmer_switch_battery
-      name: Dimmer switch
+    - sensor.patio_window_left_battery
+    - sensor.patio_window_right_battery
+    - sensor.dimmer_switch_battery
+    - sensor.family_window_left_battery
+    - sensor.family_window_right_battery
+    - sensor.hall_downstairs_motion_battery
+    - sensor.vestibule_motion_battery
+    - sensor.vestibule_window_side_battery
+    - sensor.vestibule_window_front_battery
+    - sensor.bathroom_environment_battery
+    - sensor.bathroom_window_battery
+    - sensor.guestbedroom_window_left_battery
+    - sensor.guestbedroom_window_right_battery
+    - sensor.office_button_battery
+    - sensor.office_window_battery
+    - sensor.spare_bedroom_window_left_battery
+    - sensor.spare_bedroom_window_right_battery
+    - sensor.second_bedroom_ensuite_environment_battery
+    - sensor.second_bedroom_window_ensuite_battery
+    - sensor.second_bedroom_window_right_battery
+    - sensor.second_bedroom_window_left_battery
+    - sensor.master_window_left_battery
+    - sensor.master_window_right_battery
+    - sensor.master_ensuite_environment_battery
+    - sensor.master_window_ensuite_battery
 - type: glance
   title: Zigbee links
   show_header_toggle: false
   columns: 5
   entities:
+  - sensor.living_room_table_switch_linkquality
+  - sensor.dimmer_switch_linkquality
+  - sensor.patio_window_left_linkquality
+  - sensor.patio_window_right_linkquality
+  - sensor.family_window_left_linkquality
+  - sensor.family_window_right_linkquality
+  - sensor.downstairs_hall_light_link
+  - sensor.downstairs_hall_motion_linkquality 
+  - sensor.vestibule_motion_linkquality
+  - sensor.vestibule_window_side_linkquality
+  - sensor.vestibule_window_front_linkquality
   - sensor.bathroom_environment_linkquality
+  - sensor.bathroom_window_linkquality
+  - sensor.guest_bedroom_window_left_linkquality
+  - sensor.guest_bedroom_window_right_linkquality
+  - sensor.office_button_linkquality
+  - sensor.office_window_linkquality
+  - sensor.spare_bedroom_window_left_linkquality
+  - sensor.spare_bedroom_window_right_linkquality
+  - sensor.second_bedroom_ensuite_environment_linkquality
+  - sensor.second_bedroom_window_ensuite_linkquality
+  - sensor.second_bedroom_window_left_linkquality
+  - sensor.second_bedroom_window_right_linkquality
   - sensor.master_window_left_linkquality
   - sensor.master_window_right_linkquality
-  - sensor.second_bedroom_ensuite_environment_linkquality
-  - sensor.vestibule_window_front_linkquality
-  - sensor.vestibule_window_side_linkquality
-  - entity: sensor.bathroom_window_linkquality
-    name: Bathroom window
-  - entity: sensor.downstairs_hall_light_link
-    name: Hall light
-  - entity: sensor.downstairs_hall_motion_linkquality 
-    name: Hall motion
-  - entity: sensor.vestibule_motion_linkquality
-    name: Vestibule motion
-  - entity: sensor.living_room_table_linkquality
-    name: Living room table light
-  - entity: sensor.guest_bedroom_window_left_linkquality
-    name: Guest left
-  - entity: sensor.guest_bedroom_window_right_linkquality
-    name: Guest right
-  - entity: sensor.master_ensuite_environment_linkquality
-    name: Master ensuite env
-  - entity: sensor.master_window_ensuite_linkquality
-    name: Master ensuite window
-  - entity: sensor.office_button_linkquality
-    name: Office button
-  - entity: sensor.office_window_linkquality
-    name: Office window
-  - entity: sensor.second_bedroom_window_ensuite_linkquality
-    name: Second ensuite window
-  - entity: sensor.second_bedroom_window_left_linkquality
-    name: Second left
-  - entity: sensor.second_bedroom_window_right_linkquality
-    name: Second right
-  - entity: sensor.spare_bedroom_window_left_linkquality
-    name: Spare left
-  - entity: sensor.spare_bedroom_window_right_linkquality
-    name: Spare right
-  - entity: sensor.zigbee_router1_linkquality
-    name: Router
-  - entity: sensor.router_masterbedroom_linkquality
-    name: "Router (Master)"
-  - entity: sensor.router_sparebed_linkquality
-    name: "Router (Spare)"
-  - sensor.dimmer_switch_linkquality
+  - sensor.master_ensuite_environment_linkquality
+  - sensor.master_window_ensuite_linkquality
+  - sensor.zigbee_router1_linkquality
+  - sensor.router_masterbedroom_linkquality
+  - sensor.router_sparebed_linkquality
 - type: glance
   title: Printer status
   show_header_toggle: false
@@ -208,3 +178,18 @@ cards:
   - zwave.pi3_livingroom_socket
   - zwave.pi3_vestibule
   - zwave.pi3_front_bedroom
+- type: custom:html-template-card
+  title: 'Link status times'
+  ignore_line_breaks: true
+  content: |-
+    {% for state in states.sensor -%}
+      {%- if state.attributes.linkquality %}
+        {%- if "link" in state.name %}
+          {{ relative_time(state.last_updated) }} ago for {{ state.name }}<BR>
+        {%- endif -%}
+      {%- endif -%}
+    {%- endfor %}
+    {% for state in states.zwave -%}
+       {{ relative_time(state.last_updated) }} ago for {{ state.name }}<BR>
+    {%- endfor %}
+    

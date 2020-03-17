@@ -9,6 +9,4 @@ sequence:
     entity_id: switch.pi3_hall_downstairs_switch
     state: 'on'
   - service: switch.turn_off
-    entity_id: 
-      - switch.pi3_hall_downstairs_switch
-      - switch.pi3_vestibule_switch
+    entity_id: switch.pi3_hall_downstairs_switch

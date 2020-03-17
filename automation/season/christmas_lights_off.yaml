@@ -1,5 +1,4 @@
 alias: 'Christmas lights off'
-initial_state: 'on'
 trigger:
   - platform: state
     entity_id: input_boolean.home_occupied
@@ -22,10 +21,10 @@ condition:
         entity_id: switch.pi3_family_room_socket_switch
         state: 'on'
       - condition: state
-        entity_id: switch.pi3_livingroom_socket_switch
+        entity_id: switch.pi3_cabinet_light_switch
         state: 'on'
 action:
   - service: switch.turn_off
     entity_id:
       - switch.pi3_family_room_socket_switch
-      - switch.pi3_livingroom_socket_switch
+      - switch.pi3_cabinet_light_switch

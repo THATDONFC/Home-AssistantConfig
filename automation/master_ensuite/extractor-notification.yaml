@@ -1,18 +1,22 @@
 alias: 'Extractor notification'
+initial_state: 'on'
 trigger:
-  - platform: numeric_state
-    entity_id: sensor.master_ensuite_humidity
-    above: 80
+  - platform: template
+    value_template: >-
+      {{ states('sensor.master_ensuite_humidity')|int > (((states('sensor.bathroom_humidity')|int + states('sensor.pi3_office_multi_relative_humidity')|int + states('sensor.second_bedroom_ensuite_humidity')|int)/3)+20) }}
     for: '00:01:00'
+  - platform: numeric_state
+    entity_id: sensor.master_ensuite_humidity_stats
+    value_template: '{{ state.attributes.change_rate }}'
+    above: 20
 condition:
   - condition: state
     entity_id: input_boolean.office_occupied
     state: 'on'
 action:
   # Wait for it to go back down, or an hour to pass
-  - wait_template: "{{ (states('sensor.master_ensuite_humidity')|int) < 60 }}"
-    timeout: '01:00:00'
-    continue_on_timeout: 'false'
+  - wait_template: >-
+      {{ (state_attr('sensor.master_ensuite_humidity_stats','change_rate')|abs < 0.5) and (state_attr('sensor.master_ensuite_humidity_stats','change')|abs < 0.5)}}
   - service: notify.logfile
     data:
       message: "SENDME You can turn the extractor fan off now"

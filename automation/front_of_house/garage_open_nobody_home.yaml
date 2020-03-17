@@ -1,16 +1,9 @@
 alias: 'Garage open nobody home'
-initial_state: 'on'
+initial_state: 'off'
 trigger:
   - platform: state
     entity_id: binary_sensor.pi3_garage_closed_car_sensor
     to: 'on'
-condition:
-  - condition: state
-    state: 'off'
-    entity_id: input_boolean.person3_home
-  - condition: state
-    state: 'off'
-    entity_id: input_boolean.person1_home
 action:
   - service: notify.person2
     data:

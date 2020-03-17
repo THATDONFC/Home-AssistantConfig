@@ -3,13 +3,10 @@ initial_state: 'on'
 trigger:
   # Consider the house awake if I'm up, person1 is up, or the TV comes on after 03:00
   - platform: state
-    entity_id: input_boolean.person2_is_awake
-    to: 'on'
-  - platform: state
-    entity_id: input_boolean.person1_is_awake
-    to: 'on'
-  - platform: state
-    entity_id: input_boolean.person3_is_awake
+    entity_id:
+      - input_boolean.person2_is_awake
+      - input_boolean.person1_is_awake
+      - input_boolean.person3_is_awake
     to: 'on'
 condition:
   - condition: time
